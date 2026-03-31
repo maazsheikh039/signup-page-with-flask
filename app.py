@@ -16,8 +16,40 @@ mysql = MySQL(app)
 def index():
     return render_template('index.html')
 
-@app.route('/', methods=['POST', 'GET'])
-def signup_create():
+@app.route('/about')
+def about():
+    return render_template('about.html')
+
+@app.route('/project')
+def project():
+    return render_template('project.html')
+
+@app.route('/contact')
+def contact():
+    return render_template('contact.html')
+
+@app.route('/login', methods=['POST', 'GET'])
+def login():
+    if request.method == 'POST':
+        email = request.form['email']
+        password = request.form['password']
+        
+        cursor = mysql.connection.cursor()
+        cursor.execute("SELECT * FROM signup_details WHERE email = %s AND password = %s", (email, password))
+        user = cursor.fetchone()
+        cursor.close()
+
+        if user:
+            return render_template('login.html', success="Login Successful! Welcome " + user[1])
+        else:
+            return render_template('login.html', error="Invalid email or password. Please try again.")
+            
+    return render_template('login.html')
+
+
+
+@app.route('/signup', methods=['POST', 'GET'])
+def signup(): 
     if request.method == 'POST':
         name = request.form['fullname']
         email = request.form['email']
@@ -32,11 +64,12 @@ def signup_create():
         cursor.execute(sql, val)
         mysql.connection.commit()
         cursor.close()
-        return render_template('index.html')
+        return render_template('signup.html')
+    return render_template('signup.html')
     
 
 @app.route('/data', methods=['POST', 'GET'])
-def show_data():
+def show_signup_data():
     cursor = mysql.connection.cursor()
     cursor.execute("SELECT * FROM signup_details")
     row = cursor.fetchall()

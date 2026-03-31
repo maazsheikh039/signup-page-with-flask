@@ -1,0 +1,87 @@
+ body {
+            background-color: #f8f9fa;
+            color: #212529;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            min-height: 100vh;
+            /* display: flex; */
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .signup-card {
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 450px;
+            border: 1px solid #e0e0e0;
+        }
+
+        h1 {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            text-align: center;
+            color: #1a1a1a;
+        }
+
+        .subtitle {
+            font-size: 14px;
+            color: #666;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .form-label {
+            font-weight: 500;
+            font-size: 14px;
+            margin-bottom: 6px;
+            color: #333;
+        }
+
+        .form-control,
+        .form-select {
+            border: 1px solid #ced4da;
+            padding: 10px 12px;
+            font-size: 15px;
+            border-radius: 4px;
+        }
+
+        .form-control:focus {
+            border-color: #0d6efd;
+            box-shadow: 0 0 0 3px rgba(13, 110, 253, 0.1);
+        }
+
+        .btn-signup {
+            background-color: #0d6efd;
+            border: none;
+            color: white;
+            padding: 12px;
+            font-weight: 500;
+            border-radius: 4px;
+            margin-top: 10px;
+            transition: background-color 0.2s;
+        }
+
+        .btn-signup:hover {
+            background-color: #0b5ed7;
+        }
+
+        .login-link {
+            margin-top: 25px;
+            font-size: 14px;
+            text-align: center;
+            color: #666;
+        }
+
+        .login-link a {
+            color: #0d6efd;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .login-link a:hover {
+            text-decoration: underline;
+        }

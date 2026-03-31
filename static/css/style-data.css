@@ -1,0 +1,83 @@
+body {
+        background-color: #f4f7f6;
+        color: #333;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        min-height: 100vh;
+        padding: 40px 20px;
+    }
+
+        /* Main Container Card */
+        .show-data {
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            border: 1px solid #e0e0e0;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        /* Heading Style */
+        h4 {
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 25px;
+            font-size: 1.25rem;
+            display: flex;
+            align-items: center;
+        }
+
+        h4::before {
+            content: '';
+            width: 4px;
+            height: 24px;
+            background: #0d6efd; /* Professional Blue Accent */
+            margin-right: 12px;
+            border-radius: 2px;
+        }
+
+        .table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        .table thead th {
+            background-color: #f8f9fa;
+            color: #555;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.75rem;
+            letter-spacing: 0.5px;
+            padding: 15px;
+            border-bottom: 2px solid #dee2e6;
+        }
+
+        .table tbody tr {
+            transition: background 0.2s;
+        }
+
+        .table tbody tr:hover {
+            background-color: #f1f4f9 !important; /* Light blue tint on hover */
+        }
+
+        .table td, .table th {
+            padding: 14px 15px;
+            vertical-align: middle;
+            font-size: 0.9rem;
+            border-bottom: 1px solid #eee;
+        }
+
+        .id-column {
+            font-weight: 600;
+            color: #0d6efd;
+            width: 60px;
+        }
+
+        .email-text {
+            color: #666;
+        }
+
+        .table-responsive {
+            border-radius: 8px;
+            overflow: hidden;
+        }
